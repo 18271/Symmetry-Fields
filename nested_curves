@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Nested Curves – stacked sine curves forming a layered field
+x = np.linspace(-10, 10, 1000)
+plt.figure(figsize=(6,6))
+for k in np.linspace(0.5, 3, 40):
+    y = np.sin(x*k) / k
+    plt.plot(x, y+k*0.3, lw=1, color=np.random.rand(3,))
+
+plt.axis("off")
+plt.show()
