@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Kaleido Flow – mirrored flowing curves like a kaleidoscope
+x = np.linspace(-3, 3, 800)
+plt.figure(figsize=(6,6))
+for i in np.linspace(0, 2*np.pi, 30):
+    y = np.sin(x*i) / (x+i)
+    plt.plot(x, y, lw=0.6, color=np.random.rand(3,))
+    plt.plot(x, -y, lw=0.6, color=np.random.rand(3,))
+
+plt.axis("off")
+plt.show()
